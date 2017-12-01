@@ -137,6 +137,11 @@
 
     $('#usermodify').click( function () {
       console.log("수정");
+      document.getElementById('company').value = data[3];
+      document.getElementById('name').value = data[1];
+      document.getElementById('email').value = data[0];
+      document.getElementById('part').value = data[2];
+
     });
 
 
@@ -300,6 +305,102 @@
 
       </div>
     </div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+      <div class="modal fade" id="modifymodal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">User Modify </span> </h4>
+            </div>
+            <div class="modal-body">
+              <form action="/modify" method="post">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">소속</label>
+                  <input type="text" class="form-control" name="company" placeholder="skb/sk/bp" id="company" value="sk">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">이름</label>
+                  <input type="text" class="form-control" name="name" placeholder="이름" id="name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">비밀번호</label>
+                  <input type="password" class="form-control" name="password" placeholder="Password" id="password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">연락처</label>
+                  <input type="phone" class="form-control" name="phone" placeholder="phone number" id="phone">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">담당파트</label>
+                  <input type="phone" class="form-control" name="part" placeholder="XPG/SCS/METV/NCMS..." id="part">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">권한 요청</label>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Doshare(Confluence)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Docode(Bitbucket)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Doci(Jenkins)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Dotask(JIRA)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Doinspect(Code Inspector)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Dotest(Test Manager)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Doquality(AppQ)
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> Bluemix
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label> <input type="checkbox"> TBD
+                    </label>
+                  </div>
+                </div>
+
+                <hr/>
+
+                <input type="submit" class="btn btn-default">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
 
 
 
